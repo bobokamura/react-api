@@ -48,10 +48,14 @@ const AdministracaoPratos = () => {
               <TableCell>{prato.nome}</TableCell>
               <TableCell>{prato.tag}</TableCell>
               <TableCell>
-                [<a href={prato.imagem} target="blank">ver imagem</a>]
+                [
+                <a href={prato.imagem} target="blank">
+                  ver imagem
+                </a>
+                ]
               </TableCell>
               <TableCell>
-                [<Link to={`/admin/pratos/${prato.id}`}>Editar</Link>]
+                [<Link to={`/admin/pratos/${prato.id}`}>editar</Link>]
               </TableCell>
               <TableCell>
                 <Button
