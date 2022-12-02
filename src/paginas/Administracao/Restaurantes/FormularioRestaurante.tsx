@@ -30,6 +30,7 @@ const FormularioRestaurante = () => {
         })
         .then(() => {
           alert("Restaurante atualizado com sucesso");
+          setNomeRestaurante("");
         });
     } else {
       http
@@ -38,6 +39,7 @@ const FormularioRestaurante = () => {
         })
         .then(() => {
           alert("Restaurante cadastrado com sucesso!");
+          setNomeRestaurante("");
         });
     }
   };

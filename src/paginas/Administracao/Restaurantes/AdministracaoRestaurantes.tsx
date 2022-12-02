@@ -18,7 +18,7 @@ const AdministracaoRestaurantes = () => {
 
   useEffect(() => {
     http
-      .get<IRestaurante[]>("restaurantes/")
+      .get<IRestaurante[]>("restaurantes/?ordering=nome")
       .then((resposta) => setRestaurantes(resposta.data));
   }, []);
 
@@ -47,9 +47,7 @@ const AdministracaoRestaurantes = () => {
             <TableRow key={restaurante.id}>
               <TableCell>{restaurante.nome}</TableCell>
               <TableCell>
-                [{" "}
-                <Link to={`/admin/restaurantes/${restaurante.id}`}>Editar</Link>
-                ]
+                [<Link to={`/admin/restaurantes/${restaurante.id}`}>editar</Link>]
               </TableCell>
               <TableCell>
                 <Button
